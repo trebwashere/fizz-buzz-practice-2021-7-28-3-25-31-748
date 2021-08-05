@@ -4,12 +4,16 @@ public class FizzBuzz {
     public String countOff(String specialNumber) {
         String word = "";
         int convertedNum = Integer.parseInt(specialNumber);
-        if (convertedNum % 3 == 0) {
-            word += "Fizz";
-        }
-        if (convertedNum % 5 == 0) {
-            word += "Buzz";
-        }
+        word += evaluateMultipleThree(convertedNum);
+        word += evaluateMultipleFive(convertedNum);
         return word.length() == 0 ? specialNumber : word;
+    }
+
+    public String evaluateMultipleThree(int num) {
+        return num % 3 == 0 ? "Fizz" : "";
+    }
+
+    public String evaluateMultipleFive(int num) {
+        return num % 5 == 0 ? "Buzz" : "";
     }
 }
