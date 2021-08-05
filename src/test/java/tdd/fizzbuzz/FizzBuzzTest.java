@@ -29,4 +29,10 @@ public class FizzBuzzTest {
         String specialNumber = "5";
         assertThat(fizzBuzz.countOff(specialNumber)).isEqualTo("Buzz");
     }
+
+    @Test
+    void should_return_Buzz_given_special_number_is_a_multiple_of_seven() {
+        String specialNumber = "7";
+        assertThat(fizzBuzz.countOff(specialNumber)).isEqualTo("Whizz");
+    }
 }
