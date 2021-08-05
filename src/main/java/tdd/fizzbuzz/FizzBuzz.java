@@ -7,6 +7,9 @@ public class FizzBuzz {
         if (convertedNum % 3 == 0) {
             word += "Fizz";
         }
+        if (convertedNum % 5 == 0) {
+            word += "Buzz";
+        }
         return word.length() == 0 ? specialNumber : word;
     }
 }
