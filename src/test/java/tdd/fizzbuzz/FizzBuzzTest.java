@@ -23,4 +23,10 @@ public class FizzBuzzTest {
         String specialNumber = "3";
         assertThat(fizzBuzz.countOff(specialNumber)).isEqualTo("Fizz");
     }
+
+    @Test
+    void should_return_Buzz_given_special_number_is_a_multiple_of_five() {
+        String specialNumber = "5";
+        assertThat(fizzBuzz.countOff(specialNumber)).isEqualTo("Buzz");
+    }
 }
